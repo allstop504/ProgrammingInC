@@ -16,12 +16,14 @@ int main(void)
      /* Declaration of variables */
      /*--------------------------*/
 
-     int num1 = 54, num2 = 18;
+     int num1 = 54, num2 = 17;
 
      /* Display the sum, difference, product, and */
      /* quotient of the two numbers 54 and 18     */
      /* ----------------------------------------- */
 
+     printf("The two numbers used by this program are %i and %i\n\n", num1,
+     num2);
      printf("The sum of %i and %i is %i\n", num1, num2, num1 + num2);
      printf("The difference of %i and %i is %i\n", num1, num2, num1 - num2);
      printf("The product of %i and %i is %i\n", num1, num2, num1 * num2);
