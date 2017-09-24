@@ -36,4 +36,4 @@ int main(void)
 
      return 0;
 
-} /* End the main */
+} /* End main */
