@@ -22,13 +22,11 @@ int main(void)
      /* quotient of the two numbers 54 and 18     */
      /* ----------------------------------------- */
 
-     printf("The two numbers used by this program are %i and %i\n\n", num1,
-     num2);
+     printf("The two numbers used by this program are %i and %i\n\n", num1, num2);
      printf("The sum of %i and %i is %i\n", num1, num2, num1 + num2);
      printf("The difference of %i and %i is %i\n", num1, num2, num1 - num2);
      printf("The product of %i and %i is %i\n", num1, num2, num1 * num2);
-     printf("The quotient of %i and %i is %i with a remainder of %i\n\n",
-     num1, num2, num1 / num2, num1 % num2);
+     printf("The quotient of %i and %i is %i with a remainder of %i\n\n", num1, num2, num1 / num2, num1 % num2);
      printf("Thank you for using the program\n");
 
      /* Pause the output after compiling and end program */
