@@ -23,10 +23,10 @@ int main(void)
      /* ----------------------------------------- */
 
      printf("The two numbers used by this program are %i and %i\n\n", num1, num2);
-     printf("The sum of %i and %i is %i\n", num1, num2, num1 + num2);
-     printf("The difference of %i and %i is %i\n", num1, num2, num1 - num2);
-     printf("The product of %i and %i is %i\n", num1, num2, num1 * num2);
-     printf("The quotient of %i and %i is %i with a remainder of %i\n\n", num1, num2, num1 / num2, num1 % num2);
+     printf("The sum is %i\n", num1 + num2);
+     printf("The difference is %i\n", num1 - num2);
+     printf("The product is %i\n", num1 * num2);
+     printf("The quotient is %i with a remainder of %i\n\n", num1 / num2, num1 % num2);
      printf("Thank you for using the program\n");
 
      /* Pause the output after compiling and end program */
