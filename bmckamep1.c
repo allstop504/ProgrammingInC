@@ -29,7 +29,8 @@ int main(void)
      printf("The quotient is %i with a remainder of %i\n\n", num1 / num2, num1 % num2);
      printf("Thank you for using the program\n");
 
-     /* Pause the output after compiling and end program */
+     /* Pause the output after compiling and end execution of main */
+     /* ---------------------------------------------------------- */
 
      getchar();
 
