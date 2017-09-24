@@ -22,7 +22,7 @@ int main(void)
      /* quotient of the two numbers 54 and 18     */
      /* ----------------------------------------- */
 
-     printf("The two numbers used by this program are %i and %i\n\n", num1, num2);
+     printf("The two numbers used by this program are %i and %i.\n\n", num1, num2);
      printf("The sum is %i\n", num1 + num2);
      printf("The difference is %i\n", num1 - num2);
      printf("The product is %i\n", num1 * num2);
