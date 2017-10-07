@@ -9,4 +9,14 @@ Objective:      Program Looping
 ---------------------------------------------------------------------------*/
 
 #include <stdio.h>
- 
+
+int int main(void)
+{
+     /* Pause the output after compiling and end execution of main */
+     /* ---------------------------------------------------------- */
+
+     getchar();
+
+     return 0;
+
+} /* End main */
