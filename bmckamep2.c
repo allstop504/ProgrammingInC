@@ -12,9 +12,12 @@ Objective:      Program Looping
 
 int int main(void)
 {
+     /* Declaration of variables */
+     /*--------------------------*/
+
      /* Pause the output after compiling and end execution of main */
      /* ---------------------------------------------------------- */
-
+     
      getchar();
 
      return 0;
