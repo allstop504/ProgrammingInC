@@ -25,7 +25,7 @@ int main(void)
      /* Display the welcome message stating what this program does */
      /* ---------------------------------------------------------- */
 
-     printf("Welcome to the mileage calculator\n\n");
+     printf("Welcome to the mileage calculator.\n\n");
      printf("This program will calculate the miles per gallon for you for ");
      printf("three tanks of gas after you have entered the gallons used and ");
      printf("miles driven.\n\n");
