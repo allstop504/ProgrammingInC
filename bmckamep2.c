@@ -10,7 +10,7 @@ Objective:      Program Looping
 
 #include <stdio.h>
 
-int int main(void)
+int main(void)
 {
      /* Declaration of variables */
      /*--------------------------*/
@@ -20,7 +20,7 @@ int int main(void)
      /* */
 
      printf("Welcome to the mileage calculator\n\n");
-     printf("This program will calculate the miles per gallon for you 
+     printf("This program will calculate the miles per gallon for you
      for three tanks of gas after you have entered the gallons used
      and miles driven\n\n");
 
