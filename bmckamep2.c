@@ -16,10 +16,7 @@ int main(void)
      /*--------------------------*/
 
      int counter, tank_number;
-     float miles_total = 0;
-     float gallons_total = 0;
-     float miles_input = 0;
-     float gallons_input = 0;
+     float miles_total = 0, miles_input = 0, gallons_total = 0, gallons_input = 0;
 
      /* */
 
@@ -31,7 +28,7 @@ int main(void)
      for (counter = 1, tank_number = 1; counter <= 3; counter++, tank_number++)
      {
 
-          printf("Enter the number of gallons used for tank#%i:  ", tank_number);
+          printf("Enter the number of gallons used for tank #%i:  ", tank_number);
           scanf("%f", &gallons_input);
           printf("Enter the number of miles driven:  ");
           scanf("%f", &miles_input);
