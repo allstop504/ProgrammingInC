@@ -16,7 +16,10 @@ int main(void)
      /*--------------------------*/
 
      int counter, tank_number;
-     float miles_input, miles_total, gallons_input, gallons_total;
+     float miles_total = 0;
+     float gallons_total = 0;
+     float miles_input = 0;
+     float gallons_input = 0;
 
      /* */
 
@@ -25,14 +28,14 @@ int main(void)
      printf("three tanks of gas after you have entered the gallons used and ");
      printf("miles driven\n\n");
 
-     for ( counter = 1, tank_number = 1; counter <= 3; counter++, tank_number++)
+     for ( counter = 1, tank_number = 1; counter <= 3; counter++, tank_number++ )
      {
 
-          printf("Enter the number of gallons used for tank#%i:", tank_number);
-          scanf("%i\n", gallons_input);
-          printf("Enter the number of miles driven:");
-          scanf("%i\n", miles_input);
-          printf("*** The miles per gallon for this tank is %i\n\n",
+          printf("Enter the number of gallons used for tank#%i: ", tank_number);
+          scanf("%f", &gallons_input);
+          printf("Enter the number of miles driven: ");
+          scanf("%f", &miles_input);
+          printf("*** The miles per gallon for this tank is %f\n\n",
           miles_input / gallons_input);
 
           /* */
@@ -40,13 +43,16 @@ int main(void)
           miles_total += miles_input;
           gallons_total += gallons_input;
 
+          printf("current value of miles total is %f\n", miles_total);
+          printf("current value of gallons total is %f\n", gallons_total);
+
      }
 
      /* */
 
-     printf("Your overall average miles per gallon for three tanks is %i\n\n",
+     printf("Your overall average miles per gallon for three tanks is %f\n\n",
      miles_total / gallons_total);
-     printf("Thank you for using the program Goodbye.\n");
+     printf("Thank you for using the program. Goodbye.\n");
 
      /* */
 
