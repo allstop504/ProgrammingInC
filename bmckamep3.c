@@ -17,50 +17,78 @@ int main(void)
      /* Declaration of variables */
      /*--------------------------*/
 
-     int   counter, tank_number;
-     float miles_total = 0, miles_input = 0, gallons_total = 0, gallons_input = 0;
+     int   counter, numberOfGrades, gradesAverage, grade, gradesTotal = 0;
 
      /* Display the welcome message stating what this program does */
      /* ---------------------------------------------------------- */
 
-     printf("Welcome to the mileage calculator.\n\n");
-     printf("This program will calculate the miles per gallon for you for ");
-     printf("three tanks of gas after you have entered the gallons used and ");
-     printf("miles driven.\n\n");
+     printf("This program calculates the average of as many grades you wish ");
+     printf("to enter.\n\n");
+
+     /* Begin user input for loop */
+     /* ------------------------- */
+
+     printf("First, enter the number of grades to process: ", );
+     scanf("%i", &numberOfGrades);
+     printf("Now enter the %i grades to be averaged.\n\n", numberOfGrades);
 
      /* Begin loop */
      /* ---------- */
 
-     for (counter = 1, tank_number = 1; counter <= 3; counter++, tank_number++)
+     for (counter = 1, counter <= numberOfGrades; counter++)
      {
 
           /* Request input of miles and gallons, then    */
           /* calculate and display the miles per gallon  */
           /* ------------------------------------------- */
 
-          printf("Enter the number of gallons used for tank #%i:  ", tank_number);
-          scanf("%f", &gallons_input);
-          printf("Enter the number of miles driven:  ");
-          scanf("%f", &miles_input);
-          printf("*** The miles per gallon for this tank is %.1f\n\n",
-          miles_input / gallons_input);
+          printf("Enter grade #%i: ", counter);
+          scanf("%i", &grade);
 
-          /* With every loop sequence, add the requested  */
-          /* input provided by user to the total for both */
-          /* miles and gallons                            */
-          /* -------------------------------------------- */
+          if (grade < 0)
+          {
 
-          miles_total += miles_input;
-          gallons_total += gallons_input;
+               printf("*** Invalid entry. Grade must be 0 to 100. ***\n");
+               counter -= 1;
+
+          }
+          else
+          {
+
+               gradesTotal += grade;
+
+          }
 
      } /* End loop */
+
+     gradesAverage = gradesTotal / numberOfGrades;
 
      /* Display the overall miles per gallon for all three tanks */
      /* -------------------------------------------------------- */
 
-     printf("Your overall average miles per gallon for three tanks is %.1f\n\n",
-     miles_total / gallons_total);
-     printf("Thank you for using the program. Goodbye.\n");
+     printf("The average of the %i grades entered is %i\n\n", numberOfGrades,
+     gradesAverage);
+
+     if (gradesAverage >= 90 && gradesAverage <= 100)
+     {
+          printf("You have a letter grade of A");
+     }
+     if (gradesAverage >= 80 && gradesAverage <= 89)
+     {
+          printf("You have a letter grade of B");
+     }
+     if (gradesAverage >= 70 && gradesAverage <= 79)
+     {
+          printf("You have a letter grade of C");
+     }
+     if (gradesAverage >= 60 && gradesAverage <= 69)
+     {
+          printf("You have a letter grade of D");
+     }
+     if (gradesAverage >= 0 && gradesAverage <= 59)
+     {
+          printf("You have a letter grade of F");
+     }
 
      /* Pause the output after compiling and end execution of main */
      /* ---------------------------------------------------------- */
