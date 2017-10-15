@@ -75,26 +75,29 @@ int main(void)
      printf("The average of the %i grades entered is %.0f\n\n", numberOfGrades,
      gradesAverage);
 
+      /* Begin if statements for displaying the appropriate letter grade */
+      /* --------------------------------------------------------------- */
+
      if (gradesAverage >= 90 && gradesAverage <= 100)
      {
           printf("You have a letter grade of A\n\n");
-     }
+     } /* End if statement for grade A */
      if (gradesAverage >= 80 && gradesAverage <= 89)
      {
           printf("You have a letter grade of B\n\n");
-     }
+     } /* End if statement for grade B */
      if (gradesAverage >= 70 && gradesAverage <= 79)
      {
           printf("You have a letter grade of C\n\n");
-     }
+     } /* End if statement for grade C */
      if (gradesAverage >= 60 && gradesAverage <= 69)
      {
           printf("You have a letter grade of D\n\n");
-     }
+     } /* End if statement for grade D */
      if (gradesAverage >= 0 && gradesAverage <= 59)
      {
           printf("You have a letter grade of F\n\n");
-     }
+     } /* End if statement for grade F */
 
      /* Pause the output after compiling and end execution of main */
      /* ---------------------------------------------------------- */
