@@ -17,7 +17,8 @@ int main(void)
      /* Declaration of variables */
      /*--------------------------*/
 
-     int   counter, numberOfGrades, gradesAverage, grade, gradesTotal = 0;
+     int   counter, numberOfGrades, grade;
+     float gradesAverage, gradesTotal = 0;
 
      /* Display the welcome message stating what this program does */
      /* ---------------------------------------------------------- */
@@ -28,14 +29,15 @@ int main(void)
      /* Begin user input for loop */
      /* ------------------------- */
 
-     printf("First, enter the number of grades to process: ", );
+     printf("First, enter the number of grades to process: ");
      scanf("%i", &numberOfGrades);
+     printf("\n");
      printf("Now enter the %i grades to be averaged.\n\n", numberOfGrades);
 
      /* Begin loop */
      /* ---------- */
 
-     for (counter = 1, counter <= numberOfGrades; counter++)
+     for (counter = 1; counter <= numberOfGrades; counter++)
      {
 
           /* Request input of miles and gallons, then    */
@@ -61,33 +63,37 @@ int main(void)
 
      } /* End loop */
 
+     /* Calculate the grade average */
+     /* --------------------------- */
+
      gradesAverage = gradesTotal / numberOfGrades;
 
-     /* Display the overall miles per gallon for all three tanks */
-     /* -------------------------------------------------------- */
+     /* Display the overall grade average and letter grade associated */
+     /* ------------------------------------------------------------- */
 
-     printf("The average of the %i grades entered is %i\n\n", numberOfGrades,
+     printf("\n");
+     ("The average of the %i grades entered is %.0f\n\n", numberOfGrades,
      gradesAverage);
 
      if (gradesAverage >= 90 && gradesAverage <= 100)
      {
-          printf("You have a letter grade of A");
+          printf("You have a letter grade of A\n\n");
      }
      if (gradesAverage >= 80 && gradesAverage <= 89)
      {
-          printf("You have a letter grade of B");
+          printf("You have a letter grade of B\n\n");
      }
      if (gradesAverage >= 70 && gradesAverage <= 79)
      {
-          printf("You have a letter grade of C");
+          printf("You have a letter grade of C\n\n");
      }
      if (gradesAverage >= 60 && gradesAverage <= 69)
      {
-          printf("You have a letter grade of D");
+          printf("You have a letter grade of D\n\n");
      }
      if (gradesAverage >= 0 && gradesAverage <= 59)
      {
-          printf("You have a letter grade of F");
+          printf("You have a letter grade of F\n\n");
      }
 
      /* Pause the output after compiling and end execution of main */
