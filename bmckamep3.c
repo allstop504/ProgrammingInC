@@ -72,7 +72,7 @@ int main(void)
      /* ------------------------------------------------------------- */
 
      printf("\n");
-     ("The average of the %i grades entered is %.0f\n\n", numberOfGrades,
+     printf("The average of the %i grades entered is %.0f\n\n", numberOfGrades,
      gradesAverage);
 
      if (gradesAverage >= 90 && gradesAverage <= 100)
