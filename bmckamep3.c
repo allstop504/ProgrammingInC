@@ -1,13 +1,11 @@
 /* --------------------------------------------------------------------------
 
-Program file:   bmckamep2.c
+Program file:   bmckamep3.c
 Author:         Buddy Mckamey
-Date:           October 6, 2017
-Assignment:     #2
-Objective:      Program Looping assignment that takes in the input of
-                miles travelled and gallons used to calculate the miles per
-                gallon for three different tanks then calculates the overall
-                combined miles per gallon
+Date:           October 14, 2017
+Assignment:     #3
+Objective:      Program decision making assignment that takes in multiple
+                grades via user input and calculates the average grade overall
 
 ---------------------------------------------------------------------------*/
 
