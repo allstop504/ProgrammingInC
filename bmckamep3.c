@@ -26,8 +26,8 @@ int main(void)
      printf("This program calculates the average of as many grades you wish ");
      printf("to enter.\n\n");
 
-     /* Begin user input for loop */
-     /* ------------------------- */
+     /* Begin user input for number of grades */
+     /* ------------------------------------- */
 
      printf("First, enter the number of grades to process: ");
      scanf("%i", &numberOfGrades);
@@ -40,9 +40,9 @@ int main(void)
      for (counter = 1; counter <= numberOfGrades; counter++)
      {
 
-          /* Request input of miles and gallons, then    */
-          /* calculate and display the miles per gallon  */
-          /* ------------------------------------------- */
+          /* Request input of grade, then validate it is not a negative  */
+          /* number. If its valid, proceed to adding to total            */
+          /* ----------------------------------------------------------- */
 
           printf("Enter grade #%i: ", counter);
           scanf("%i", &grade);
@@ -53,13 +53,13 @@ int main(void)
                printf("*** Invalid entry. Grade must be 0 to 100. ***\n");
                counter -= 1;
 
-          }
+          } /* End if statement */
           else
           {
 
                gradesTotal += grade;
 
-          }
+          } /* End else statement */
 
      } /* End loop */
 
