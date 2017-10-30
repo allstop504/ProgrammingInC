@@ -89,15 +89,14 @@ int main(void)
 
      } /* End loop */
 
-     /* Begin current balance loop */
-     /* -------------------------- */
+     /* Begin deposit entry loop */
+     /* ------------------------ */
 
      for (z = 1; z < numberOfDeposits; z++)
      {
 
-          /* Request input of grade, then validate it is not a negative  */
-          /* number. If its valid, proceed to adding to total            */
-          /* ----------------------------------------------------------- */
+          /* Request input */
+          /* ------------- */
 
           printf("Enter the amount of deposit #%i: ", z);
           scanf("%f", deposits[z]);
