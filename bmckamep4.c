@@ -18,7 +18,8 @@ int main(void)
      /*--------------------------*/
 
      int   numberOfDeposits, numberOfWithdrawals, y, z;
-     float currentBalance = 0.0, deposits[6] = { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 };
+     float currentBalance = 0.0, startingBalance = 0.0;
+     float deposits[6] = { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 };
      float withdrawals[6] = { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 };
 
      /* Display the welcome message stating what this program does */
@@ -48,6 +49,8 @@ int main(void)
 
      printf("\n");
 
+     startingBalance += currentBalance;
+
      /* Begin number of deposits loop */
      /* ----------------------------- */
 
@@ -69,6 +72,10 @@ int main(void)
 
           for (z = 0; z < 1; z++)
           {
+
+               /* Request input */
+               /* ------------- */
+
                printf("Enter the number of deposits: ");
                scanf("%i", &numberOfDeposits);
 
@@ -83,17 +90,19 @@ int main(void)
 
           } /* End loop */
 
-     }
+     } /* End if statement */
 
      printf("\n");
 
-
-
-     /* Begin number of withdrawals loop */
-     /* -------------------------------- */
+     /* Begin number of withdrawals */
+     /* --------------------------- */
 
      for (z = 0; z < 1; z++)
      {
+
+          /* Request input */
+          /* ------------- */
+
           printf("Enter the number of withdrawals (0 - 5): ");
           scanf("%i", &numberOfWithdrawals);
 
@@ -137,7 +146,7 @@ int main(void)
 
                currentBalance += deposits[z];
 
-          }
+          } /* End else statement */
 
      } /* End loop */
 
@@ -165,11 +174,14 @@ int main(void)
 
                currentBalance -= withdrawals[z];
 
-          }
+          } /* End else statement */
 
      } /* End loop */
 
      printf("\n");
+
+     /* Begin displaying of closing balance */
+     /* ----------------------------------- */
 
      printf("*** The closing balance is $%.2f ***\n", currentBalance);
 
@@ -190,8 +202,37 @@ int main(void)
           printf("*** Your balance is getting low! ***\n\n");
      } /* End if statement */
 
+     /* Begin Bank Record display */
+     /* ------------------------- */
+
      printf("*** Bank Record ***\n\n");
-     printf("Starting Balance: $ %.2f\n\n", currentBalance);
+
+     /* Display Starting Balance */
+     /* ------------------------ */
+
+     if (startingBalance >= 0.00 && startingBalance <= 9.99)
+     {
+          printf("Starting Balance:     $ %.2f\n", startingBalance);
+     } /* End if statement */
+     if (startingBalance >= 10.00 && startingBalance <= 99.99)
+     {
+          printf("Starting Balance:    $ %.2f\n", startingBalance);
+     } /* End if statement */
+     if (startingBalance >= 100.00 && startingBalance <= 999.99)
+     {
+          printf("Starting Balance:   $ %.2f\n", startingBalance);
+     } /* End if statement */
+     if (startingBalance >= 1000.00 && startingBalance <= 9999.99)
+     {
+          printf("Starting Balance:  $ %.2f\n", startingBalance);
+     } /* End if statement */
+     if (startingBalance >= 10000.00 && startingBalance <= 99999.99)
+     {
+          printf("Starting Balance: $ %.2f\n", startingBalance);
+     } /* End if statement */
+
+     /* Begin display deposits */
+     /* ---------------------- */
 
      for (z = 1; z < numberOfDeposits + 1; z++)
      {
@@ -202,42 +243,42 @@ int main(void)
           if (deposits[z] > 0.00 && deposits[z] <= 9.99)
           {
 
-               printf("Deposit #%i:           %.2f\n", z, deposits[z]);
+               printf("Deposit #%i:             %.2f\n", z, deposits[z]);
 
           } /* End if statement */
 
           if (deposits[z] > 10.00 && deposits[z] <= 99.99)
           {
 
-               printf("Deposit #%i:          %.2f\n", z, deposits[z]);
+               printf("Deposit #%i:            %.2f\n", z, deposits[z]);
 
           } /* End if statement */
 
           if (deposits[z] >=100.00 && deposits[z] <= 999.99)
           {
 
-               printf("Deposit #%i:         %.2f\n", z, deposits[z]);
+               printf("Deposit #%i:           %.2f\n", z, deposits[z]);
 
           } /* End if statement */
 
           if (deposits[z] >= 1000.00 && deposits[z] <= 9999.99)
           {
 
-               printf("Deposit #%i:        %.2f\n", z, deposits[z]);
+               printf("Deposit #%i:          %.2f\n", z, deposits[z]);
 
           } /* End if statement */
 
           if (deposits[z] >= 10000.00 && deposits[z] <= 99999.99)
           {
 
-               printf("Deposit #%i:       %.2f\n", z, deposits[z]);
+               printf("Deposit #%i:         %.2f\n", z, deposits[z]);
 
           } /* End if statement */
 
      } /* End loop */
 
-     /* Start Bank Record withdrawals */
-     /* ----------------------------- */
+     /* Begin display withdrawals */
+     /* ------------------------- */
 
      printf("\n");
 
@@ -250,35 +291,35 @@ int main(void)
           if (withdrawals[z] >= 0.00 && withdrawals[z] <= 9.99)
           {
 
-               printf("Withdrawal #%i:        %.2f\n", z, withdrawals[z]);
+               printf("Withdrawal #%i:          %.2f\n", z, withdrawals[z]);
 
           } /* End if statement */
 
           if (withdrawals[z] >= 10.00 && withdrawals[z] <= 99.99)
           {
 
-               printf("Withdrawal #%i:       %.2f\n", z, withdrawals[z]);
+               printf("Withdrawal #%i:         %.2f\n", z, withdrawals[z]);
 
           } /* End if statement */
 
           if (withdrawals[z] >=100.00 && withdrawals[z] <= 999.99)
           {
 
-               printf("Withdrawal #%i:      %.2f\n", z, withdrawals[z]);
+               printf("Withdrawal #%i:        %.2f\n", z, withdrawals[z]);
 
           } /* End if statement */
 
           if (withdrawals[z] >= 1000.00 && withdrawals[z] <= 9999.99)
           {
 
-               printf("Withdrawal #%i:     %.2f\n", z, withdrawals[z]);
+               printf("Withdrawal #%i:       %.2f\n", z, withdrawals[z]);
 
           } /* End if statement */
 
           if (withdrawals[z] >= 10000.00 && withdrawals[z] <= 99999.99)
           {
 
-               printf("Withdrawal #%i:    %.2f\n", z, withdrawals[z]);
+               printf("Withdrawal #%i:      %.2f\n", z, withdrawals[z]);
 
           } /* End if statement */
 
@@ -286,25 +327,28 @@ int main(void)
 
      printf("\n");
 
+     /* Begin display current balance */
+     /* ----------------------------- */
+
      if (currentBalance >= 0.00 && currentBalance <= 9.99)
      {
-          printf("Ending Balance:     $ %.2f\n", currentBalance);
+          printf("Ending Balance:       $ %.2f\n", currentBalance);
      } /* End if statement */
      if (currentBalance >= 10.00 && currentBalance <= 99.99)
      {
-          printf("Ending Balance:    $ %.2f\n", currentBalance);
+          printf("Ending Balance:      $ %.2f\n", currentBalance);
      } /* End if statement */
      if (currentBalance >= 100.00 && currentBalance <= 999.99)
      {
-          printf("Ending Balance:   $ %.2f\n", currentBalance);
+          printf("Ending Balance:     $ %.2f\n", currentBalance);
      } /* End if statement */
      if (currentBalance >= 1000.00 && currentBalance <= 9999.99)
      {
-          printf("Ending Balance:  $ %.2f\n", currentBalance);
+          printf("Ending Balance:    $ %.2f\n", currentBalance);
      } /* End if statement */
      if (currentBalance >= 10000.00 && currentBalance <= 99999.99)
      {
-          printf("Ending Balance: $ %.2f\n", currentBalance);
+          printf("Ending Balance:   $ %.2f\n", currentBalance);
      } /* End if statement */
 
 
