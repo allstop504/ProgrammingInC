@@ -92,7 +92,7 @@ int main(void)
      /* Begin deposit entry loop */
      /* ------------------------ */
 
-     for (z = 1; z < numberOfDeposits; z++)
+     for (z = 1; z < numberOfDeposits + 1; z++)
      {
 
           /* Request input */
@@ -100,7 +100,7 @@ int main(void)
 
           printf("Enter the amount of deposit #%i: ", z);
           scanf("%f", &deposits[z]);
-          printf("\n\n");
+          printf("\n");
 
           if (deposits[z] < 0)
           {
@@ -120,7 +120,7 @@ int main(void)
 
      } /* End loop */
 
-     for (z = 1; z < numberOfWithdrawals; z++)
+     for (z = 1; z < numberOfWithdrawals + 1; z++)
      {
 
           /* Request input */
@@ -128,7 +128,7 @@ int main(void)
 
           printf("Enter the amount of withdrawal #%i: ", z);
           scanf("%f", &withdrawals[z]);
-          printf("\n\n");
+          printf("\n");
 
           if (withdrawals[z] > currentBalance)
           {
@@ -147,7 +147,7 @@ int main(void)
 
      } /* End loop */
 
-     printf("*** The closing balance is %f\n", currentBalance);
+     printf("*** The closing balance is $%.2f\n ***", currentBalance);
 
      /* Pause the output after compiling and end execution of main */
      /* ---------------------------------------------------------- */
