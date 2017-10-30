@@ -17,49 +17,52 @@ int main(void)
      /* Declaration of variables */
      /*--------------------------*/
 
-     int   counter, numberOfGrades, grade;
-     float gradesAverage, gradesTotal = 0;
+     int   numberOfDeposits, numberOfWithdrawals, z, grade;
+     float currentBalance, deposits[6] = {0, 0, 0, 0, 0, 0},
+     withdrawals[6] = {0, 0, 0, 0, 0, 0};
 
      /* Display the welcome message stating what this program does */
      /* ---------------------------------------------------------- */
 
-     printf("This program calculates the average of as many grades you wish ");
-     printf("to enter.\n\n");
+     printf("Welcome to the Computer Banking System\n\n");
 
-     /* Begin user input for number of grades */
-     /* ------------------------------------- */
+     /* Begin user input for bank balance, deposits, and withdrawals */
+     /* ------------------------------------------------------------ */
 
-     printf("First, enter the number of grades to process: ");
-     scanf("%i", &numberOfGrades);
-     printf("\n");
-     printf("Now enter the %i grades to be averaged.\n\n", numberOfGrades);
+     printf("Enter your current balance in dollars and cents: ");
+     scanf("%f", &currentBalance);
+     printf("\n\n");
+     printf("Enter the number of deposits (0 - 5): ");
+     scanf("%i", &numberOfDeposits);
+     printf("\n\n");
+     printf("Enter the number of withdrawals (0 - 5): ");
+     scanf("%i", &numberOfWithdrawals);
+     printf("\n\n");
+
 
      /* Begin loop */
      /* ---------- */
 
-     for (counter = 1; counter <= numberOfGrades; counter++)
+     for (z = 1; z < numberOfDeposits; z++)
      {
 
           /* Request input of grade, then validate it is not a negative  */
           /* number. If its valid, proceed to adding to total            */
           /* ----------------------------------------------------------- */
 
-          printf("Enter grade #%i: ", counter);
-          scanf("%i", &grade);
+          printf("Enter the amount of deposit #%i: ", z);
+          scanf("%f", deposits[z]);
+          printf("\n");
 
-          if (grade < 0)
+          if (deposits[z] < 0)
           {
 
-               printf("*** Invalid entry. Grade must be 0 to 100. ***\n");
-               counter -= 1;
+               printf("*** Deposit amount must be greater than zero, ");
+               printf("please re-enter.\n");
+
+               z -= 1;
 
           } /* End if statement */
-          else
-          {
-
-               gradesTotal += grade;
-
-          } /* End else statement */
 
      } /* End loop */
 
