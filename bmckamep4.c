@@ -173,6 +173,141 @@ int main(void)
 
      printf("*** The closing balance is $%.2f ***\n", currentBalance);
 
+     if (currentBalance >= 50000.00)
+     {
+          printf("*** It is time to invest some money! ***\n\n");
+     } /* End if statement */
+     if (currentBalance <= 49999.99 && currentBalance >= 15000.00)
+     {
+          printf("*** Maybe you should consider a CD. ***\n\n");
+     } /* End if statement */
+     if (currentBalance <= 14999.99 && currentBalance >= 1000.00)
+     {
+          printf("*** Keep up the good work! ***\n\n");
+     } /* End if statement */
+     if (currentBalance <= 999.99 && currentBalance >= 0.00)
+     {
+          printf("*** Your balance is getting low! ***\n\n");
+     } /* End if statement */
+
+     printf("*** Bank Record ***\n\n");
+     printf("Starting Balance: $ %.2f\n\n", currentBalance);
+
+     for (z = 1; z < numberOfDeposits + 1; z++)
+     {
+
+          /* Request input */
+          /* ------------- */
+
+          if (deposits[z] > 0.00 && deposits[z] <= 9.99)
+          {
+
+               printf("Deposit #%i:           %.2f\n", z, deposits[z]);
+
+          } /* End if statement */
+
+          if (deposits[z] > 10.00 && deposits[z] <= 99.99)
+          {
+
+               printf("Deposit #%i:          %.2f\n", z, deposits[z]);
+
+          } /* End if statement */
+
+          if (deposits[z] >=100.00 && deposits[z] <= 999.99)
+          {
+
+               printf("Deposit #%i:         %.2f\n", z, deposits[z]);
+
+          } /* End if statement */
+
+          if (deposits[z] >= 1000.00 && deposits[z] <= 9999.99)
+          {
+
+               printf("Deposit #%i:        %.2f\n", z, deposits[z]);
+
+          } /* End if statement */
+
+          if (deposits[z] >= 10000.00 && deposits[z] <= 99999.99)
+          {
+
+               printf("Deposit #%i:       %.2f\n", z, deposits[z]);
+
+          } /* End if statement */
+
+     } /* End loop */
+
+     /* Start Bank Record withdrawals */
+     /* ----------------------------- */
+
+     printf("\n");
+
+     for (z = 1; z < numberOfWithdrawals + 1; z++)
+     {
+
+          /* Request input */
+          /* ------------- */
+
+          if (withdrawals[z] >= 0.00 && withdrawals[z] <= 9.99)
+          {
+
+               printf("Withdrawal #%i:        %.2f\n", z, withdrawals[z]);
+
+          } /* End if statement */
+
+          if (withdrawals[z] >= 10.00 && withdrawals[z] <= 99.99)
+          {
+
+               printf("Withdrawal #%i:       %.2f\n", z, withdrawals[z]);
+
+          } /* End if statement */
+
+          if (withdrawals[z] >=100.00 && withdrawals[z] <= 999.99)
+          {
+
+               printf("Withdrawal #%i:      %.2f\n", z, withdrawals[z]);
+
+          } /* End if statement */
+
+          if (withdrawals[z] >= 1000.00 && withdrawals[z] <= 9999.99)
+          {
+
+               printf("Withdrawal #%i:     %.2f\n", z, withdrawals[z]);
+
+          } /* End if statement */
+
+          if (withdrawals[z] >= 10000.00 && withdrawals[z] <= 99999.99)
+          {
+
+               printf("Withdrawal #%i:    %.2f\n", z, withdrawals[z]);
+
+          } /* End if statement */
+
+     } /* End loop */
+
+     printf("\n");
+
+     if (currentBalance >= 0.00 && currentBalance <= 9.99)
+     {
+          printf("Ending Balance:     $ %.2f\n", currentBalance);
+     } /* End if statement */
+     if (currentBalance >= 10.00 && currentBalance <= 99.99)
+     {
+          printf("Ending Balance:    $ %.2f\n", currentBalance);
+     } /* End if statement */
+     if (currentBalance >= 100.00 && currentBalance <= 999.99)
+     {
+          printf("Ending Balance:   $ %.2f\n", currentBalance);
+     } /* End if statement */
+     if (currentBalance >= 1000.00 && currentBalance <= 9999.99)
+     {
+          printf("Ending Balance:  $ %.2f\n", currentBalance);
+     } /* End if statement */
+     if (currentBalance >= 10000.00 && currentBalance <= 99999.99)
+     {
+          printf("Ending Balance: $ %.2f\n", currentBalance);
+     } /* End if statement */
+
+
      /* Pause the output after compiling and end execution of main */
      /* ---------------------------------------------------------- */
 
