@@ -17,7 +17,7 @@ int main(void)
      /* Declaration of variables */
      /*--------------------------*/
 
-     int   numberOfDeposits, numberOfWithdrawals, z, grade;
+     int   numberOfDeposits, numberOfWithdrawals, z;
      float currentBalance, deposits[6] = {0, 0, 0, 0, 0, 0},
      withdrawals[6] = {0, 0, 0, 0, 0, 0};
 
@@ -28,10 +28,40 @@ int main(void)
 
      /* Begin user input for bank balance, deposits, and withdrawals */
      /* ------------------------------------------------------------ */
+     for (z = 0; z < 1; z++)
+     {
+          printf("Enter your current balance in dollars and cents: ");
+          scanf("%f", &currentBalance);
+          printf("\n\n");
 
-     printf("Enter your current balance in dollars and cents: ");
-     scanf("%f", &currentBalance);
-     printf("\n\n");
+          if (currentBalance < 0)
+          {
+
+               printf("*** Beginning balance must be at least zero, ");
+               printf("please re-enter.\n\n");
+
+               z -= 1;
+
+          } /* End if statement */
+     }
+
+     for (z = 0; z < 1; z++)
+     {
+          printf("Enter the number of deposits (0 - 5): ");
+          scanf("%i", &numberOfDeposits);
+          printf("\n\n");
+
+          if (numberOfDeposits < 0 || numberOfDeposits > 5)
+          {
+
+               printf("*** Invalid number of deposits, ");
+               printf("please re-enter.\n\n");
+
+               z -= 1;
+
+          } /* End if statement */
+     }
+
      printf("Enter the number of deposits (0 - 5): ");
      scanf("%i", &numberOfDeposits);
      printf("\n\n");
@@ -52,7 +82,7 @@ int main(void)
 
           printf("Enter the amount of deposit #%i: ", z);
           scanf("%f", deposits[z]);
-          printf("\n");
+          printf("\n\n");
 
           if (deposits[z] < 0)
           {
@@ -65,42 +95,6 @@ int main(void)
           } /* End if statement */
 
      } /* End loop */
-
-     /* Calculate the grade average */
-     /* --------------------------- */
-
-     gradesAverage = gradesTotal / numberOfGrades;
-
-     /* Display the overall grade average and letter grade associated */
-     /* ------------------------------------------------------------- */
-
-     printf("\n");
-     printf("The average of the %i grades entered is %.0f\n\n", numberOfGrades,
-     gradesAverage);
-
-      /* Begin if statements for displaying the appropriate letter grade */
-      /* --------------------------------------------------------------- */
-
-     if (gradesAverage >= 90 && gradesAverage <= 100)
-     {
-          printf("You have a letter grade of A\n\n");
-     } /* End if statement for grade A */
-     if (gradesAverage >= 80 && gradesAverage <= 89)
-     {
-          printf("You have a letter grade of B\n\n");
-     } /* End if statement for grade B */
-     if (gradesAverage >= 70 && gradesAverage <= 79)
-     {
-          printf("You have a letter grade of C\n\n");
-     } /* End if statement for grade C */
-     if (gradesAverage >= 60 && gradesAverage <= 69)
-     {
-          printf("You have a letter grade of D\n\n");
-     } /* End if statement for grade D */
-     if (gradesAverage >= 0 && gradesAverage <= 59)
-     {
-          printf("You have a letter grade of F\n\n");
-     } /* End if statement for grade F */
 
      /* Pause the output after compiling and end execution of main */
      /* ---------------------------------------------------------- */
