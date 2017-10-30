@@ -100,7 +100,6 @@ int main(void)
 
           printf("Enter the amount of deposit #%i: ", z);
           scanf("%f", &deposits[z]);
-          printf("\n");
 
           if (deposits[z] < 0)
           {
@@ -128,7 +127,6 @@ int main(void)
 
           printf("Enter the amount of withdrawal #%i: ", z);
           scanf("%f", &withdrawals[z]);
-          printf("\n");
 
           if (withdrawals[z] > currentBalance)
           {
@@ -147,7 +145,7 @@ int main(void)
 
      } /* End loop */
 
-     printf("*** The closing balance is $%.2f\n ***", currentBalance);
+     printf("*** The closing balance is $%.2f ***", currentBalance);
 
      /* Pause the output after compiling and end execution of main */
      /* ---------------------------------------------------------- */
