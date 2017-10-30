@@ -1,11 +1,11 @@
 /* --------------------------------------------------------------------------
 
-Program file:   bmckamep3.c
+Program file:   bmckamep4.c
 Author:         Buddy Mckamey
-Date:           October 14, 2017
-Assignment:     #3
-Objective:      Program decision making assignment that takes in multiple
-                grades via user input and calculates the average grade overall
+Date:           October 28, 2017
+Assignment:     #4
+Objective:      Program array assignment that performs simple banking
+                transactions
 
 ---------------------------------------------------------------------------*/
 
