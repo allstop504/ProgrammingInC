@@ -119,6 +119,8 @@ int main(void)
 
      } /* End loop */
 
+     printf("\n");
+
      for (z = 1; z < numberOfWithdrawals + 1; z++)
      {
 
@@ -145,7 +147,9 @@ int main(void)
 
      } /* End loop */
 
-     printf("*** The closing balance is $%.2f ***", currentBalance);
+     printf("\n");
+
+     printf("*** The closing balance is $%.2f ***\n", currentBalance);
 
      /* Pause the output after compiling and end execution of main */
      /* ---------------------------------------------------------- */
