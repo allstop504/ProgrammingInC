@@ -18,7 +18,7 @@ int main(void)
      /*--------------------------*/
 
      int   numberOfDeposits, numberOfWithdrawals, z;
-     float currentBalance, deposits[6] = {0, 0, 0, 0, 0, 0},
+     float currentBalance = 0, deposits[6] = {0, 0, 0, 0, 0, 0},
      withdrawals[6] = {0, 0, 0, 0, 0, 0};
 
      /* Display the welcome message stating what this program does */
@@ -26,8 +26,9 @@ int main(void)
 
      printf("Welcome to the Computer Banking System\n\n");
 
-     /* Begin user input for bank balance, deposits, and withdrawals */
-     /* ------------------------------------------------------------ */
+     /* Begin current balance loop */
+     /* -------------------------- */
+
      for (z = 0; z < 1; z++)
      {
           printf("Enter your current balance in dollars and cents: ");
@@ -43,7 +44,11 @@ int main(void)
                z -= 1;
 
           } /* End if statement */
-     }
+
+     } /* End loop */
+
+     /* Begin number of deposits loop */
+     /* ----------------------------- */
 
      for (z = 0; z < 1; z++)
      {
@@ -60,18 +65,32 @@ int main(void)
                z -= 1;
 
           } /* End if statement */
-     }
 
-     printf("Enter the number of deposits (0 - 5): ");
-     scanf("%i", &numberOfDeposits);
-     printf("\n\n");
-     printf("Enter the number of withdrawals (0 - 5): ");
-     scanf("%i", &numberOfWithdrawals);
-     printf("\n\n");
+     } /* End loop */
 
+     /* Begin number of withdrawals loop */
+     /* -------------------------------- */
 
-     /* Begin loop */
-     /* ---------- */
+     for (z = 0; z < 1; z++)
+     {
+          printf("Enter the number of withdrawals (0 - 5): ");
+          scanf("%i", &numberOfWithdrawals);
+          printf("\n\n");
+
+          if (numberOfWithdrawals < 0 || numberOfWithdrawals > 5)
+          {
+
+               printf("*** Invalid number of withdrawals, ");
+               printf("please re-enter.\n\n");
+
+               z -= 1;
+
+          } /* End if statement */
+
+     } /* End loop */
+
+     /* Begin current balance loop */
+     /* -------------------------- */
 
      for (z = 1; z < numberOfDeposits; z++)
      {
