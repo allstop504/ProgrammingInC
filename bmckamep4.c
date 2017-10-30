@@ -33,7 +33,6 @@ int main(void)
      {
           printf("Enter your current balance in dollars and cents: ");
           scanf("%f", &currentBalance);
-          printf("\n\n");
 
           if (currentBalance < 0)
           {
@@ -47,6 +46,8 @@ int main(void)
 
      } /* End loop */
 
+     printf("\n");
+
      /* Begin number of deposits loop */
      /* ----------------------------- */
 
@@ -54,19 +55,20 @@ int main(void)
      {
           printf("Enter the number of deposits (0 - 5): ");
           scanf("%i", &numberOfDeposits);
-          printf("\n\n");
 
           if (numberOfDeposits < 0 || numberOfDeposits > 5)
           {
 
                printf("*** Invalid number of deposits, ");
-               printf("please re-enter.\n\n");
+               printf("please re-enter.\n");
 
                z -= 1;
 
           } /* End if statement */
 
      } /* End loop */
+
+     printf("\n");
 
      /* Begin number of withdrawals loop */
      /* -------------------------------- */
@@ -75,19 +77,20 @@ int main(void)
      {
           printf("Enter the number of withdrawals (0 - 5): ");
           scanf("%i", &numberOfWithdrawals);
-          printf("\n\n");
 
           if (numberOfWithdrawals < 0 || numberOfWithdrawals > 5)
           {
 
                printf("*** Invalid number of withdrawals, ");
-               printf("please re-enter.\n\n");
+               printf("please re-enter.\n");
 
                z -= 1;
 
           } /* End if statement */
 
      } /* End loop */
+
+     printf("\n");
 
      /* Begin deposit entry loop */
      /* ------------------------ */
