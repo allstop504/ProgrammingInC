@@ -17,7 +17,7 @@ int main(void)
      /* Declaration of variables */
      /*--------------------------*/
 
-     int   numberOfDeposits, numberOfWithdrawals, z;
+     int   numberOfDeposits, numberOfWithdrawals, y, z;
      float currentBalance = 0.0, deposits[6] = { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 };
      float withdrawals[6] = { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 };
 
@@ -51,24 +51,43 @@ int main(void)
      /* Begin number of deposits loop */
      /* ----------------------------- */
 
-     for (z = 0; z < 1; z++)
+     printf("Enter the number of deposits (0 - 5): ");
+     scanf("%i", &numberOfDeposits);
+
+     if (numberOfDeposits < 0 || numberOfDeposits > 5)
      {
-          printf("Enter the number of deposits (0 - 5): ");
-          scanf("%i", &numberOfDeposits);
 
-          if (numberOfDeposits < 0 || numberOfDeposits > 5)
+          printf("*** Invalid number of deposits, ");
+          printf("please re-enter.\n");
+
+          y = 1;
+
+     } /* End if statement */
+
+     if (y == 1)
+     {
+
+          for (z = 0; z < 1; z++)
           {
+               printf("Enter the number of deposits: ");
+               scanf("%i", &numberOfDeposits);
 
-               printf("*** Invalid number of deposits, ");
-               printf("please re-enter.\n");
+               if (numberOfDeposits < 0 || numberOfDeposits > 5)
+               {
 
-               z -= 1;
+                    printf("*** Invalid number of deposits, ");
+                    printf("please re-enter.\n");
 
-          } /* End if statement */
+                    z -= 1;
+               } /* End if statement */
 
-     } /* End loop */
+          } /* End loop */
+
+     }
 
      printf("\n");
+
+
 
      /* Begin number of withdrawals loop */
      /* -------------------------------- */
