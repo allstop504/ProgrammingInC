@@ -18,8 +18,8 @@ int main(void)
      /*--------------------------*/
 
      int   numberOfDeposits, numberOfWithdrawals, z;
-     float currentBalance = 0, deposits[6] = {0, 0, 0, 0, 0, 0},
-     withdrawals[6] = {0, 0, 0, 0, 0, 0};
+     float currentBalance = 0.0, deposits[6] = { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 };
+     float withdrawals[6] = { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 };
 
      /* Display the welcome message stating what this program does */
      /* ---------------------------------------------------------- */
@@ -99,20 +99,55 @@ int main(void)
           /* ------------- */
 
           printf("Enter the amount of deposit #%i: ", z);
-          scanf("%f", deposits[z]);
+          scanf("%f", &deposits[z]);
           printf("\n\n");
 
           if (deposits[z] < 0)
           {
 
                printf("*** Deposit amount must be greater than zero, ");
-               printf("please re-enter.\n");
+               printf("please re-enter.\n\n");
 
                z -= 1;
 
           } /* End if statement */
+          else
+          {
+
+               currentBalance += deposits[z];
+
+          }
 
      } /* End loop */
+
+     for (z = 1; z < numberOfWithdrawals; z++)
+     {
+
+          /* Request input */
+          /* ------------- */
+
+          printf("Enter the amount of withdrawal #%i: ", z);
+          scanf("%f", &withdrawals[z]);
+          printf("\n\n");
+
+          if (withdrawals[z] > currentBalance)
+          {
+
+               printf("*** Withdrawal amount exceeds current balance. \n\n");
+
+               z -= 1;
+
+          } /* End if statement */
+          else
+          {
+
+               currentBalance -= withdrawals[z];
+
+          }
+
+     } /* End loop */
+
+     printf("*** The closing balance is %f\n", currentBalance);
 
      /* Pause the output after compiling and end execution of main */
      /* ---------------------------------------------------------- */
