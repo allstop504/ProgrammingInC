@@ -11,6 +11,61 @@ Objective:      Program function assignment that improves upon the assignment
 
 #include <stdio.h>
 
+float functionBalanceVar;
+int   functionDepositVar;
+int   functionWithdrawVar;
+
+void currentBalanceEntry (void)
+{
+
+     printf("Enter your current balance in dollars and cents: ");
+     scanf("%f", &functionBalanceVar);
+
+     while (functionBalanceVar < 0) {
+
+          printf("*** Beginning balance must be at least zero, ");
+          printf("please re-enter.\n\n");
+          printf("Enter your current balance in dollars and cents: ");
+          scanf("%f", &functionBalanceVar);
+
+     }
+
+}
+
+void numberOfDepositsEntry (void)
+{
+
+     printf("Enter the number of deposits (0 - 5): ");
+     scanf("%i", &functionDepositVar);
+
+     while (functionDepositVar < 0 || functionDepositVar > 5) {
+
+          printf("*** Invalid number of deposits, ");
+          printf("please re-enter.\n");
+          printf("Enter the number of deposits (0 - 5): ");
+          scanf("%i", &functionDepositVar);
+
+     }
+
+}
+
+void numberOfWithdrawalsEntry (void)
+{
+
+     printf("Enter the number of withdrawals (0 - 5): ");
+     scanf("%i", &functionWithdrawVar);
+
+     while (functionWithdrawVar < 0 || functionWithdrawVar > 5) {
+
+          printf("*** Invalid number of withdrawals, ");
+          printf("please re-enter.\n");
+          printf("Enter the number of withdrawals (0 - 5): ");
+          scanf("%i", &functionWithdrawVar);
+
+     }
+
+}
+
 int main(void)
 {
 
@@ -30,22 +85,8 @@ int main(void)
      /* Begin current balance loop */
      /* -------------------------- */
 
-     for (z = 0; z < 1; z++)
-     {
-          printf("Enter your current balance in dollars and cents: ");
-          scanf("%f", &currentBalance);
-
-          if (currentBalance < 0)
-          {
-
-               printf("*** Beginning balance must be at least zero, ");
-               printf("please re-enter.\n\n");
-
-               z -= 1;
-
-          } /* End if statement */
-
-     } /* End loop */
+     currentBalanceEntry ();
+     currentBalance = functionBalanceVar;
 
      printf("\n");
 
@@ -54,69 +95,16 @@ int main(void)
      /* Begin number of deposits loop */
      /* ----------------------------- */
 
-     printf("Enter the number of deposits (0 - 5): ");
-     scanf("%i", &numberOfDeposits);
-
-     if (numberOfDeposits < 0 || numberOfDeposits > 5)
-     {
-
-          printf("*** Invalid number of deposits, ");
-          printf("please re-enter.\n");
-
-          y = 1;
-
-     } /* End if statement */
-
-     if (y == 1)
-     {
-
-          for (z = 0; z < 1; z++)
-          {
-
-               /* Request input */
-               /* ------------- */
-
-               printf("Enter the number of deposits: ");
-               scanf("%i", &numberOfDeposits);
-
-               if (numberOfDeposits < 0 || numberOfDeposits > 5)
-               {
-
-                    printf("*** Invalid number of deposits, ");
-                    printf("please re-enter.\n");
-
-                    z -= 1;
-               } /* End if statement */
-
-          } /* End loop */
-
-     } /* End if statement */
+     numberOfDepositsEntry ();
+     numberOfDeposits = functionDepositVar;
 
      printf("\n");
 
      /* Begin number of withdrawals */
      /* --------------------------- */
 
-     for (z = 0; z < 1; z++)
-     {
-
-          /* Request input */
-          /* ------------- */
-
-          printf("Enter the number of withdrawals (0 - 5): ");
-          scanf("%i", &numberOfWithdrawals);
-
-          if (numberOfWithdrawals < 0 || numberOfWithdrawals > 5)
-          {
-
-               printf("*** Invalid number of withdrawals, ");
-               printf("please re-enter.\n");
-
-               z -= 1;
-
-          } /* End if statement */
-
-     } /* End loop */
+     numberOfWithdrawalsEntry ();
+     numberOfWithdrawals = functionWithdrawVar;
 
      printf("\n");
 
