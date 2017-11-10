@@ -11,12 +11,21 @@ Objective:      Program function assignment that improves upon the assignment
 
 #include <stdio.h>
 
+/* Declaration of global variables */
+/*---------------------------------*/
+
 float functionBalanceVar;
 int   functionDepositVar;
 int   functionWithdrawVar;
 
+/* Begin current balance entry function */
+/* ------------------------------------ */
+
 void currentBalanceEntry (void)
 {
+
+     /* Request input */
+     /* ------------- */
 
      printf("Enter your current balance in dollars and cents: ");
      scanf("%f", &functionBalanceVar);
@@ -28,12 +37,18 @@ void currentBalanceEntry (void)
           printf("Enter your current balance in dollars and cents: ");
           scanf("%f", &functionBalanceVar);
 
-     }
+     } /* End while statement */
 
-}
+} /* End function */
+
+/* Begin number of deposits entry function */
+/* --------------------------------------- */
 
 void numberOfDepositsEntry (void)
 {
+
+     /* Request input */
+     /* ------------- */
 
      printf("Enter the number of deposits (0 - 5): ");
      scanf("%i", &functionDepositVar);
@@ -45,12 +60,18 @@ void numberOfDepositsEntry (void)
           printf("Enter the number of deposits (0 - 5): ");
           scanf("%i", &functionDepositVar);
 
-     }
+     } /* End while statement */
 
-}
+} /* End function */
+
+/* Begin number of withdrawals entry function */
+/* ------------------------------------------ */
 
 void numberOfWithdrawalsEntry (void)
 {
+
+     /* Request input */
+     /* ------------- */
 
      printf("Enter the number of withdrawals (0 - 5): ");
      scanf("%i", &functionWithdrawVar);
@@ -62,9 +83,9 @@ void numberOfWithdrawalsEntry (void)
           printf("Enter the number of withdrawals (0 - 5): ");
           scanf("%i", &functionWithdrawVar);
 
-     }
+     } /* End while statement */
 
-}
+} /* End function */
 
 int main(void)
 {
@@ -82,8 +103,8 @@ int main(void)
 
      printf("Welcome to the Computer Banking System\n\n");
 
-     /* Begin current balance loop */
-     /* -------------------------- */
+     /* Begin current balance function */
+     /* ------------------------------ */
 
      currentBalanceEntry ();
      currentBalance = functionBalanceVar;
@@ -92,19 +113,19 @@ int main(void)
 
      startingBalance += currentBalance;
 
-     /* Begin number of deposits loop */
-     /* ----------------------------- */
-
-     numberOfDepositsEntry ();
-     numberOfDeposits = functionDepositVar;
-
-     printf("\n");
-
-     /* Begin number of withdrawals */
-     /* --------------------------- */
+     /* Begin number of withdrawals function */
+     /* ------------------------------------ */
 
      numberOfWithdrawalsEntry ();
      numberOfWithdrawals = functionWithdrawVar;
+
+     printf("\n");
+
+     /* Begin number of deposits function */
+     /* --------------------------------- */
+
+     numberOfDepositsEntry ();
+     numberOfDeposits = functionDepositVar;
 
      printf("\n");
 
